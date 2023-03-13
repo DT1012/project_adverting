@@ -1,0 +1,46 @@
+.header {
+    margin: auto;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 7px 0px 18px 31px;
+    z-index: 3;
+    @include flex($justify-content: space-around);
+    height: 90px;
+    width: 100%;
+    &-logo {
+        padding: 23px 0px 0px 0px;
+    }
+    &-menu {
+        flex: 2;
+        @include flex();
+        padding: 13px 0px 0px 0px;
+        &>li {
+            padding: 0 15px;
+            &>a {
+                color: $white-clr;
+                font-size: 2rem;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    color: rgb(243, 220, 17);
+                }
+            }
+        }
+    }
+    &-btn-callus {
+        border-radius: 25px;
+        border-color: rgb(243, 220, 17) !important;
+        &::after,
+        &::before {
+            display: none;
+        }
+        &>p {
+            color: $white-clr;
+            font-size: 1.3rem !important;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+}
