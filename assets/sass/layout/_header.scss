@@ -1,37 +1,55 @@
 .header {
     margin: auto;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: rgba(255, 255, 255, 0.2);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 7px 0px 18px 31px;
     z-index: 3;
     @include flex($justify-content: space-around);
+    @include abs($y: 5rem);
     height: 90px;
-    width: 100%;
+    width: 100vw;
     &-logo {
-        padding: 23px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
     }
-    &-menu {
+    &-nav {
         flex: 2;
         @include flex();
         padding: 13px 0px 0px 0px;
         &>li {
             padding: 0 15px;
+            position: relative;
             &>a {
                 color: $white-clr;
                 font-size: 2rem;
                 font-weight: 600;
                 transition: 0.3s ease-in-out;
-                &:hover {
-                    color: rgb(243, 220, 17);
+                &>i {
+                    padding-left: 10px;
                 }
+                &:hover {
+                    color: $yellow-clr;
+                }
+            }
+            &:hover .header-subnav {
+                display: inline-block;
             }
         }
     }
+    &-subnav {
+        display: none;
+        @include abs($y: 40px, $x: 0, $translateX: 0, $translateY: 0);
+        transition: 0.5s ease-in-out;
+        text-align: left;
+        min-width: 200px;
+        line-height: 70px;
+        background-color: #000;
+        &>li>a {
+            color: $white-clr;
+        }
+    }
     &-btn-callus {
+        margin-top: 5px;
         border-radius: 25px;
-        border-color: rgb(243, 220, 17) !important;
+        border-color: $yellow-clr !important;
         &::after,
         &::before {
             display: none;
@@ -39,8 +57,11 @@
         &>p {
             color: $white-clr;
             font-size: 1.3rem !important;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
+            &:hover {
+                color: #333;
+            }
         }
     }
 }

@@ -1,8 +1,52 @@
-.slider {
-    &-img {
+.slide {
+    cursor: context-menu;
+    button {
+        display: none;
+        transition: all 0.5s ease-in;
+        span:hover button::after {
+            background-color: $yellow-clr;
+        }
+        &::after {
+            content: "";
+            width: 50px;
+            @include abs($y: 49.7%);
+            height: 50px;
+            content: "";
+            border-radius: 50%;
+            border: 2px solid;
+        }
+    }
+    &:hover button {
+        display: inline-block;
+    }
+    .carousel-item {
         width: 100%;
         height: 100%;
-        margin-left: 0px;
-        margin-top: 0px;
+        & img {
+            min-width: 100vw;
+            height: 900px;
+            overflow: inherit;
+            object-fit: cover;
+        }
+    }
+    .carousel-caption {
+        @include abs($y: 54%, $x: 42%);
+        text-align: left;
+        font-size: 3rem;
+        h5 {
+            font-weight: 900;
+            font-size: 6rem;
+            margin-bottom: 0;
+        }
+        p {
+            min-width: 1200px;
+        }
+        &-adverting {
+            font-size: 10rem !important;
+            text-transform: uppercase;
+            color: $yellow-clr;
+            font-family: 'Shantell Sans', sans-serif;
+            font-weight: 400;
+        }
     }
 }
