@@ -146,7 +146,7 @@
         background-position: center;
         color: $white-clr;
         &-container {
-            padding: 140px 0;
+            padding: 140px 0 150px;
         }
         &-header {
             p {
@@ -167,15 +167,21 @@
                 font-weight: 700;
                 opacity: 0.4;
                 font-family: 'Poppin', sans-serif;
+                cursor: pointer;
             }
         }
         &-box {
             width: 100%;
             &-item {
-                @include flex();
+                @include flex($justify-content: none);
                 gap: 15px;
+                margin: 10px;
+                .active {
+                    display: block !important;
+                }
             }
             &-list {
+                display: none;
                 position: relative;
                 &:hover .work-info {
                     display: block;
@@ -215,8 +221,46 @@
                 }
             }
         }
-        .active {
-            opacity: 1;
+        &-btn {
+            margin: 100px auto 0;
+            min-width: 230px;
+            min-height: 52px;
+            color: $white-clr;
+            font-family: 'Poppins', sans-serif;
+            background-color: $yellow-clr;
+            border-radius: 25px 25px 25px 25px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-style: normal;
+            &::after,
+            &::before {
+                display: none;
+            }
+            &:hover {
+                background-color: $white-clr;
+                color: $black-clr;
+            }
+        }
+    }
+    .serviecs {
+        background-color: $black-clr;
+        background-image: url('https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/bg-7-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &-container {
+            padding: 140px 0 150px;
+        }
+        &-header {
+            h2 {
+                margin-bottom: 20px;
+            }
+            p {
+                max-width: 570px;
+                margin: auto;
+            }
         }
     }
     footer {

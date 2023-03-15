@@ -158,7 +158,7 @@ article {
           transform: translateX(0) translateY(0);
   bottom: 0;
   width: 0;
-  height: 6px;
+  height: 3px;
   border-radius: 15px;
   background-color: rgb(248, 189, 6);
   -webkit-transition: all 0.2s ease;
@@ -220,7 +220,7 @@ article {
   padding: 13px 0px 0px 0px;
 }
 .header-nav > li {
-  padding: 0 15px;
+  padding: 10px 15px 15px;
   position: relative;
 }
 .header-nav > li > a {
@@ -242,7 +242,7 @@ article {
 .header-subnav {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 0;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0);
@@ -255,6 +255,10 @@ article {
 }
 .header-subnav > li > a {
   color: #fff;
+  font-size: 1.3rem;
+}
+.header-subnav > li > a:hover {
+  color: rgb(248, 189, 6);
 }
 .header-btn-callus {
   margin-top: 5px;
@@ -620,7 +624,7 @@ article {
   color: #fff;
 }
 #app .work-container {
-  padding: 140px 0;
+  padding: 140px 0 150px;
 }
 #app .work-header p {
   color: #fff;
@@ -640,6 +644,7 @@ article {
   font-weight: 700;
   opacity: 0.4;
   font-family: "Poppin", sans-serif;
+  cursor: pointer;
 }
 #app .work-box {
   width: 100%;
@@ -652,17 +657,22 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 15px;
+  margin: 10px;
+}
+#app .work-box-item .active {
+  display: block !important;
 }
 #app .work-box-list {
+  display: none;
   position: relative;
 }
 #app .work-box-list:hover .work-info {
@@ -708,8 +718,43 @@ article {
 #app .work-info .work-link-name:hover a {
   color: #fff;
 }
-#app .work .active {
-  opacity: 1;
+#app .work-btn {
+  margin: 100px auto 0;
+  min-width: 230px;
+  min-height: 52px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(248, 189, 6);
+  border-radius: 25px 25px 25px 25px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: normal;
+}
+#app .work-btn::after, #app .work-btn::before {
+  display: none;
+}
+#app .work-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+#app .serviecs {
+  background-color: #000;
+  background-image: url("https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/bg-7-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#app .serviecs-container {
+  padding: 140px 0 150px;
+}
+#app .serviecs-header h2 {
+  margin-bottom: 20px;
+}
+#app .serviecs-header p {
+  max-width: 570px;
+  margin: auto;
 }
 #app footer {
   font-weight: bolder;

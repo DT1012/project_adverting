@@ -15,7 +15,7 @@
         @include flex();
         padding: 13px 0px 0px 0px;
         &>li {
-            padding: 0 15px;
+            padding: 10px 15px 15px;
             position: relative;
             &>a {
                 color: $white-clr;
@@ -36,7 +36,7 @@
     }
     &-subnav {
         display: none;
-        @include abs($y: 40px, $x: 0, $translateX: 0, $translateY: 0);
+        @include abs($y: 50px, $x: 0, $translateX: 0, $translateY: 0);
         transition: 0.5s ease-in-out;
         text-align: left;
         min-width: 200px;
@@ -44,6 +44,10 @@
         background-color: #000;
         &>li>a {
             color: $white-clr;
+            font-size: 1.3rem;
+            &:hover {
+                color: $yellow-clr;
+            }
         }
     }
     &-btn-callus {
