@@ -4,10 +4,16 @@
     height: 2px;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.3);
+    @include tablet {
+        @include abs($y: 150px)
+    }
+    @include mobile {
+        @include abs($y: 160px)
+    }
 }
 
 .retangle2 {
-    @include abs($y: 580px);
+    @include abs($y: 10px);
     width: 800px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.05);

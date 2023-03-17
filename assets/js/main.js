@@ -6,7 +6,8 @@ const work_box = $$('.work-box-list');
 // console.log(work_box, work_nav);
 const navActive = $('.work-nav-item.active');
 const retangle = $('.work-nav .retangle3');
-
+const navALl = $('.work-nav-item.all');
+const navCpm = $('.work-nav-item.cpm');
 
 requestIdleCallback(function() {
     retangle.style.left = navActive.offsetLeft + "px";
@@ -20,16 +21,18 @@ const email = $$('.work-box-list.email');
 const creative = $$('.work-box-list.creative');
 
 
+const box = [all, cpm, pr, phygital, email, creative];
+console.log(box);
 work_nav.forEach((nav, index) => {
-    const box = work_box[index];
     nav.onclick = function() {
-
         $('.work-nav-item.active').classList.remove("active");
         $('.work-box-list.active').classList.remove("active");
 
         retangle.style.left = this.offsetLeft + "px";
         retangle.style.width = this.offsetWidth + "px";
+
         this.classList.add('active');
-        box.classList.add('active');
+
+        box[index].classList.toggle('active');
     }
 });

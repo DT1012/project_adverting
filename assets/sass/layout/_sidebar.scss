@@ -33,19 +33,46 @@
         @include abs($y: 54%, $x: 42%);
         text-align: left;
         font-size: 3rem;
+        @include tablet {
+            font-size: 2rem;
+        }
+        @include mobile {
+            display: block !important;
+            font-size: 4rem;
+        }
         h5 {
+            @include tablet {
+                font-size: 4rem;
+            }
+            @include mobile {
+                font-size: 2rem;
+            }
             font-weight: 900;
             font-size: 6rem;
             margin-bottom: 0;
         }
         p {
             min-width: 1200px;
+            @include mobile {
+                min-width: 200px;
+                font-size: 1.6rem;
+            }
+            @include tablet {
+                min-width: 200px;
+            }
         }
         &-adverting {
             font-size: 10rem !important;
+            @include tablet {
+                font-size: 3rem !important;
+            }
+            @include mobile {
+                font-size: 3rem !important;
+            }
             text-transform: uppercase;
             color: $yellow-clr;
-            font-family: 'Shantell Sans', sans-serif;
+            font-family: 'Shantell Sans',
+            sans-serif;
             font-weight: 400;
         }
     }

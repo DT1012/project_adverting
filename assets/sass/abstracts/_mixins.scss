@@ -1,19 +1,39 @@
 @mixin size($width: 10rem, $height: 10rem) {
-  width: $width;
-  height: $height;
+    width: $width;
+    height: $height;
 }
 
 @mixin flex($justify-content: center, $align-items: center, $wrap: wrap, $direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-  flex-wrap: $wrap;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
 }
 
 @mixin abs($x: 50%, $translateX: -50%, $y: 50%, $translateY: -50%) {
-  position: absolute;
-  top: $y;
-  left: $x;
-  transform: translateX($translateX) translateY($translateY);
+    position: absolute;
+    top: $y;
+    left: $x;
+    transform: translateX($translateX) translateY($translateY);
+}
+
+$mobile-width: 46.1875rem;
+$desktop-width: 64rem;
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width + 0.0625rem }) and (max-width: #{$desktop-width - 0.062rem}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
 }

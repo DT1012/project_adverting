@@ -3,14 +3,29 @@
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 7px 0px 18px 31px;
     z-index: 3;
-    @include flex($justify-content: space-around);
+    @include flex($justify-content: space-between);
     @include abs($y: 5rem);
     height: 90px;
     width: 100vw;
+    @include tablet {
+        padding: 0 30px;
+    }
     &-logo {
         padding: 10px 0px 0px 0px;
+        @include mobile {
+            order: 2;
+        }
     }
     &-nav {
+        @include tablet() {
+            order: 3;
+            margin-top: 10px;
+            flex-basis: 100%;
+        }
+        @include mobile() {
+            flex-basis: 80%;
+            order: 1;
+        }
         flex: 2;
         @include flex();
         padding: 13px 0px 0px 0px;
@@ -20,6 +35,12 @@
             &>a {
                 color: $white-clr;
                 font-size: 2rem;
+                @include tablet {
+                    font-size: 1.6rem;
+                }
+                @include mobile {
+                    font-size: 1.6rem;
+                }
                 font-weight: 600;
                 transition: 0.3s ease-in-out;
                 &>i {
@@ -51,6 +72,10 @@
         }
     }
     &-btn-callus {
+        @include mobile {
+            order: 3;
+            display: none !important;
+        }
         margin-top: 5px;
         border-radius: 25px;
         border-color: $yellow-clr !important;

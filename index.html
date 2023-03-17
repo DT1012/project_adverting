@@ -17,7 +17,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous" defer></script>
 
+    <!-- Particel Js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="./assets/js/particles.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
     <!-- css -->
+
+
     <link rel="stylesheet" href="./assets/css/main.min.css">
     <script src="./assets/js/main.js" defer></script>
 </head>
@@ -90,42 +96,46 @@
             <!-- Start About -->
             <section id="about" class="about">
                 <div class="about-container">
+                    <div id="particles-js"></div>
                     <div class="about-header">
                         <h2 class="title">AboutUs</h2>
                         <p class="derc">Welcome to the About Us section of our agency website. This is where we’d usually tell you we care more about results then awards. Here agencies also usually brag about their unique station at the intersection of specialized expertise
                             and a generalist approach and give themselves a ‘thumbs up’ for having a perfect blend of big agency resources and small agency nimbleness.</p>
                         <video class="elementor-video" src="https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/monstroid_backgroundx264.mp4" loop="" controls="" muted="muted" controlslist="nodownload"></video>
                     </div>
-                    <div class="about-intro">
-                        <div class="about-item">
-                            <div class="about-list">
-                                <div class="about-image">
-                                    <img src="./assets/images/about_icon/icon-1.png" alt="Icon About">
-                                </div>
-                                <h2 class="about-list-title">Decades of Experience</h2>
-                                <p>We are a US leading global communications marketing firm, enhanced by more than a hundred of talented employees.</p>
+
+                </div>
+            </section>
+            <section>
+                <div class="about-intro">
+                    <div class="about-item">
+                        <div class="about-list">
+                            <div class="about-image">
+                                <img src="./assets/images/about_icon/icon-1.png" alt="Icon About">
                             </div>
-                            <div class="about-list">
-                                <div class="about-image">
-                                    <img src="./assets/images/about_icon/icon-2.png" alt="Icon About">
-                                </div>
-                                <h2 class="about-list-title">Team of Skilled Pros</h2>
-                                <p>Led by few seasoned advertising industry pros, our agency delivers innovative solutions across all the mediums available nowadays.</p>
+                            <h2 class="about-list-title">Decades of Experience</h2>
+                            <p>We are a US leading global communications marketing firm, enhanced by more than a hundred of talented employees.</p>
+                        </div>
+                        <div class="about-list">
+                            <div class="about-image">
+                                <img src="./assets/images/about_icon/icon-2.png" alt="Icon About">
                             </div>
-                            <div class="about-list">
-                                <div class="about-image">
-                                    <img src="./assets/images/about_icon/icon-3.png" alt="Icon About">
-                                </div>
-                                <h2 class="about-list-title">We Love Challenges!</h2>
-                                <p>Our ultimate goal and passion are about helping brands to meet the ever-shifting needs of communities and cultures.</p>
+                            <h2 class="about-list-title">Team of Skilled Pros</h2>
+                            <p>Led by few seasoned advertising industry pros, our agency delivers innovative solutions across all the mediums available nowadays.</p>
+                        </div>
+                        <div class="about-list">
+                            <div class="about-image">
+                                <img src="./assets/images/about_icon/icon-3.png" alt="Icon About">
                             </div>
-                            <div class="about-list">
-                                <div class="about-image">
-                                    <img src="./assets/images/about_icon/icon-4.png" alt="Icon About">
-                                </div>
-                                <h2 class="about-list-title">Huge Works Portfolio</h2>
-                                <p>Over all those years, we’ve designed and implemented some of the most iconic and now industry-standard digital business solutions.</p>
+                            <h2 class="about-list-title">We Love Challenges!</h2>
+                            <p>Our ultimate goal and passion are about helping brands to meet the ever-shifting needs of communities and cultures.</p>
+                        </div>
+                        <div class="about-list">
+                            <div class="about-image">
+                                <img src="./assets/images/about_icon/icon-4.png" alt="Icon About">
                             </div>
+                            <h2 class="about-list-title">Huge Works Portfolio</h2>
+                            <p>Over all those years, we’ve designed and implemented some of the most iconic and now industry-standard digital business solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -163,8 +173,8 @@
                         <div class="skill-list">
                             <i class="fa fa-circle"></i>
                         </div>
+                        <div class="retangle2"></div>
                     </div>
-                    <div class="retangle2"></div>
                 </div>
             </section>
             <!-- End Skills -->
@@ -587,6 +597,85 @@
                     </div>
                 </div>
             </section>
+            <section id="email_update" class="update">
+                <div class="update-container">
+                    <div class="update-header">
+                        <h2 class="title">Sign Up for <span class="clr-yellow">Email Updates!</span></h2>
+                        <p class="derc">Knowing about all the recent developments in the industry is how you should handle being an adman!</p>
+                    </div>
+                    <div class="update-send">
+                        <form action="index.html">
+                            <label for="email">
+                                <input type="email" name="email" class="email-input" id="email" placeholder="Your Email Here" required>
+                            </label>
+                            <a href="" class="form-link">
+                                Submit
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="contact">
+                <div class="contact-container">
+                    <div class="contact-box">
+                        <div class="contact-box-img">
+                            <img src="./assets/images/about_icon/icon-5.png" alt="Contact Image">
+                        </div>
+                        <div class="contact-box-info">
+                            <h3 class="contact-box-info-title">Address</h3>
+                            <p class="contact-box-info-derc">908 New Hampshire Avenue Northwest #100, Washington, DC 20037, United States</p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-box-img">
+                            <img src="./assets/images/about_icon/icon-6.png" alt="Contact Image">
+                        </div>
+                        <div class="contact-box-info">
+                            <h3 class="contact-box-info-title">Phones</h3>
+                            <p class="contact-box-info-derc">Phone: <a href="callto:+19168752235">+1 916-875-2235</a>
+                                <br> Mobile: <a href="callto:+19168752235">+1 916-875-2235</a>
+                                <br> Fax: <a href="callto:+19168752235">+1 916-875-2235</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-box-img">
+                            <img src="./assets/images/about_icon/icon-7.png" alt="Contact Image">
+                        </div>
+                        <div class="contact-box-info">
+                            <h3 class="contact-box-info-title">Contacts</h3>
+                            <p class="contact-box-info-derc"><a href="mailto:adverting@demolink.org">adverting@demolink.org</a>
+                                <br>
+                                <a href="mailto:adverting-1@demolink.org">adverting-1@demolink.org</a>
+                                <br>
+                                <a href="mailto:adverting-2@demolink.org">adverting-2@demolink.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-box-img">
+                            <img src="./assets/images/about_icon/icon-8.png" alt="Contact Image">
+                        </div>
+                        <div class="contact-box-info">
+                            <h3 class="contact-box-info-title">Working Hours</h3>
+                            <p class="contact-box-info-derc">Monday-Friday: 9:00 – 18:00
+                                <br> Saturday: 11:00 – 17:00
+                                <br> Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer" class="footer">
+                <div class="footer-container">
+                    <div class="footer-copyright">
+                        <p><a href="#">NVT</a> ©. All rights reserved.</p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-behance"></i></i></a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>
