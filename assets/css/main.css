@@ -376,13 +376,23 @@ article {
 .slide .carousel-item {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .slide .carousel-item img {
-  min-width: 100vw;
+  width: 100%;
   height: 900px;
-  overflow: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 46.25rem) and (max-width: 63.938rem) {
+  .slide .carousel-item img {
+    height: 700px;
+  }
+}
+@media (max-width: 46.1875rem) {
+  .slide .carousel-item img {
+    height: 700px;
+  }
 }
 .slide .carousel-caption {
   position: absolute;
