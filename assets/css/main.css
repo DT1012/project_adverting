@@ -134,7 +134,7 @@ article {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   width: 100%;
-  height: 2px;
+  height: 1px;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -189,7 +189,7 @@ article {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, -webkit-box-shadow 0.3s;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  padding: 7px 0px 18px 31px;
+  padding: 3px 0px 18px 31px;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1305,4 +1305,24 @@ article {
   font-weight: 400;
   font-style: normal;
   line-height: 28.8px;
+}
+
+.aboutus {
+  background-image: url(https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/bg-9.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutus-container {
+  margin-bottom: 0px;
+  padding: 203px 0px 151px 0px;
+}
+.aboutus-title {
+  padding: 10px;
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 72px;
+  letter-spacing: -3px;
 }

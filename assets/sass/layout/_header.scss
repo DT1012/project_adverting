@@ -1,7 +1,7 @@
 .header {
     margin: auto;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    padding: 7px 0px 18px 31px;
+    padding: 3px 0px 18px 31px;
     z-index: 3;
     @include flex($justify-content: space-between);
     @include abs($y: 5rem);
