@@ -1,0 +1,105 @@
+.work {
+    background-color: $black-clr;
+    background-image: url('https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/bg-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white-clr;
+    &-container {
+        padding: 140px 0 150px;
+    }
+    &-header {
+        p {
+            color: $white-clr;
+            max-width: 570px;
+            margin: 0 auto 30px;
+        }
+    }
+    &-nav {
+        max-width: 600px;
+        margin: auto;
+        position: relative;
+        &-item {
+            display: inline-block;
+            padding-bottom: 4px;
+            margin: 0 29px 21px 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            opacity: 0.4;
+            font-family: 'Poppin', sans-serif;
+            cursor: pointer;
+        }
+    }
+    &-box {
+        width: 100%;
+        &-item {
+            @include flex($justify-content: none);
+            gap: 15px;
+            margin: 10px;
+            .active {
+                display: block !important;
+            }
+        }
+        &-list {
+            position: relative;
+            &:hover .work-info {
+                display: block;
+                background-color: rgba(248, 189, 6, 0.9);
+            }
+        }
+    }
+    &-img {
+        min-width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    &-info {
+        transition: all 0.5s linear;
+        @include abs();
+        width: 100%;
+        height: 100%;
+        padding-top: 125px;
+        display: none;
+        background-color: transparent;
+        .work-icon {
+            font-size: 2rem;
+            & i {
+                padding: 8px;
+                margin-bottom: 40px;
+            }
+        }
+        .work-link-name {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: $black-clr;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &:hover a {
+                color: $white-clr;
+            }
+        }
+    }
+    &-btn {
+        margin: 100px auto 0;
+        min-width: 230px;
+        min-height: 52px;
+        color: $white-clr;
+        font-family: 'Poppins', sans-serif;
+        background-color: $yellow-clr;
+        border-radius: 25px 25px 25px 25px;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: normal;
+        &::after,
+        &::before {
+            display: none;
+        }
+        &:hover {
+            background-color: $white-clr;
+            color: $black-clr;
+        }
+    }
+}

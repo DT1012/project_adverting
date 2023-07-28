@@ -1,38 +1,75 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+
 const work_nav = $$('.work-nav-item');
 const work_box = $$('.work-box-list');
-// console.log(work_box, work_nav);
-const navActive = $('.work-nav-item.active');
-const retangle = $('.work-nav .retangle3');
-const navALl = $('.work-nav-item.all');
-const navCpm = $('.work-nav-item.cpm');
+const retangle = $('.work-nav .retangle3')
 
-requestIdleCallback(function() {
-    retangle.style.left = navActive.offsetLeft + "px";
-    retangle.style.width = navActive.offsetWidth + "px";
-});
-const all = $$('.work-box-list.all');
-const cpm = $$('.work-box-list.cpm');
-const pr = $$('.work-box-list.pr');
-const phygital = $$('.work-box-list.phygital');
-const email = $$('.work-box-list.email');
-const creative = $$('.work-box-list.creative');
+const completed = $('.completed')
+const members = $('.members')
+const hours = $('.hours')
+const won = $('.won')
+let elToShow = $('.show-on-scroll');
 
 
-const box = [all, cpm, pr, phygital, email, creative];
-console.log(box);
-work_nav.forEach((nav, index) => {
-    nav.onclick = function() {
+// filter
+work_nav.forEach((nav) => {
+
+    nav.addEventListener('click', function(e) {
         $('.work-nav-item.active').classList.remove("active");
-        $('.work-box-list.active').classList.remove("active");
 
         retangle.style.left = this.offsetLeft + "px";
         retangle.style.width = this.offsetWidth + "px";
 
-        this.classList.add('active');
+        e.target.classList.add('active');
+        const type = e.target.getAttribute('type-word')
+        work_box.forEach((item) => {
+            if (type == 'all' || item.getAttribute('type-word').includes(type)) item.classList.remove('hide')
+            else item.classList.add('hide')
+        })
+    })
+})
 
-        box[index].classList.toggle('active');
+// counter
+let isElInViewPort = (el) => {
+    let rect = el.getBoundingClientRect();
+    // some browsers support innerHeight, others support documentElement.clientHeight
+    let viewHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    return (
+        rect.top >= 0 && rect.bottom <= viewHeight
+        // (rect.top <= 0 && rect.bottom >= 0) ||
+        // (rect.bottom >= viewHeight && rect.top <= viewHeight)
+        // (rect.top >= 0 && rect.bottom <= viewHeight)
+
+    );
+};
+
+function loop() {
+    if (isElInViewPort(elToShow)) {
+        counterUp(completed, 250)
+        counterUp(members, 320)
+        counterUp(hours, 15)
+        counterUp(won, 99);
     }
-});
+
+}
+
+window.onscroll = loop;
+loop()
+
+function counterUp(el, to) {
+    let speed = 200;
+    let from = 0;
+    let step = to / speed;
+    const counter = setInterval(function() {
+        from += step;
+        if (from > to) {
+            clearInterval(counter);
+            el.innerText = to;
+        } else {
+            el.innerText = Math.ceil(from);
+        }
+    }, 1);
+}
