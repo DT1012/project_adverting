@@ -42,6 +42,7 @@
         }
         &-list {
             position: relative;
+            display: none;
             &:hover .work-info {
                 display: block;
                 background-color: rgba(248, 189, 6, 0.9);
@@ -49,10 +50,9 @@
         }
     }
     &-img {
-        min-width: 100%;
-        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
         overflow: hidden;
-        object-fit: cover;
     }
     &-info {
         transition: all 0.5s linear;

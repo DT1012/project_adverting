@@ -1,0 +1,62 @@
+.meet-box {
+    max-width: 1200px;
+    margin: auto;
+    &-item {
+        @include flex();
+    }
+    &-list {
+        @include flex($direction: column);
+        background-color: $white-clr;
+        margin: 60px 30px 0 0;
+        overflow: hidden;
+        border-radius: 10px;
+        &-info {
+            max-width: 283px;
+            padding-bottom: 40px;
+            & h4 {
+                color: $black-clr;
+                font-family: 'Poppins', sans-serif;
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 26.4px;
+                margin-top: 45px;
+            }
+            &-date {
+                font-family: "Poppins", sans-serif;
+                color: #ffc000;
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 25.5px;
+                letter-spacing: 2.4px;
+                margin: 0px 0px 18px 0px;
+                align-self: center;
+                text-align: center;
+            }
+            &-decr {
+                font-family: 'Poppins', sans-serif;
+                color: #aaaaaa;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 24.5px;
+                width: 300px;
+            }
+            &-socials {
+                @include flex();
+                gap: 25px;
+                margin-top: 30px;
+                &-item {
+                    & a {
+                        color: #ffc000;
+                        & i {
+                            font-size: 1.8rem;
+                        }
+                        &:hover {
+                            color: $black-clr;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

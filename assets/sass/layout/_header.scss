@@ -79,16 +79,15 @@
         margin-top: 5px;
         border-radius: 25px;
         border-color: $yellow-clr !important;
-        &::after,
-        &::before {
-            display: none;
-        }
         &>p {
             color: $white-clr;
             font-size: 1.3rem !important;
             font-weight: 700;
             text-transform: uppercase;
-            &:hover {
+        }
+        &:hover {
+            background-color: $white-clr;
+            p {
                 color: #333;
             }
         }
