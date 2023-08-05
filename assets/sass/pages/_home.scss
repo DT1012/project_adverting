@@ -42,12 +42,24 @@
             margin: auto;
         }
         &-header {
-            min-width: 1200px;
+            max-width: 1200px;
             @include abs();
+            @include tablet() {
+                min-width: 700px;
+            }
+            @include mobile() {
+                width: 100%;
+            }
         }
         & p {
             margin: 0px auto 30px;
             max-width: 1050px;
+            @include tablet() {
+                display: none;
+            }
+            @include mobile() {
+                display: none;
+            }
         }
         .elementor-video {
             max-width: 100%;
@@ -57,20 +69,23 @@
             border: none;
         }
         &-intro {
-            position: relative;
-            min-height: 560px;
             background-color: $black-clr;
             background-image: url('https://ld-wp73.template-help.com/wordpress/prod_8033/v1/wp-content/uploads/2019/07/bg-2.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            z-index: -1;
         }
         &-item {
-            min-width: 1200px;
-            @include flex($wrap: no-wrap);
-            @include abs();
+            max-width: 1200px;
+            margin: auto;
+            padding: 120px 0;
+            @include tablet() {
+                padding: 60px 0;
+            }
+            @include mobile() {
+                padding: 0;
+            }
         }
         &-list {
             padding: 20px;
@@ -103,7 +118,10 @@
         background-size: cover;
         background-position: center;
         &-container {
-            padding: 140px 0;
+            @include desktop() {
+                padding: 140px 0;
+            }
+            padding: 40px 0;
         }
         &-header {
             p {
@@ -113,11 +131,19 @@
         }
         &-list {
             flex: 1;
+            @include mobile() {
+                padding: 10px 0 30px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
         }
         &-date {
             margin: 100px auto 0;
             max-width: 1200px;
             @include flex();
+            @include mobile() {
+                margin: 30px auto 0;
+                flex-flow: column nowrap;
+            }
             .skill-time {
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -145,6 +171,9 @@
             @include flex();
             max-width: 1200px;
             position: relative;
+            @include mobile() {
+                display: none;
+            }
         }
     }
     .services {
@@ -155,6 +184,12 @@
         background-position: center;
         &-container {
             padding: 120px 0 85px;
+            @include mobile() {
+                padding: 30px 0;
+            }
+            @include tablet() {
+                padding: 50px 0;
+            }
         }
         &-header {
             h2 {
@@ -229,12 +264,18 @@
                 flex-flow: column nowrap;
                 background-color: #ffffff;
                 margin: 90px 146px 50px 146px;
-                border-radius: 10px 10px 10px 10px;
+                border-radius: 10px;
+                @include tablet() {
+                    margin: 78px 0px 30px 0px;
+                }
+                @include mobile() {
+                    margin: 78px 0px 30px 0px;
+                }
             }
             &-image {
                 order: 1;
                 margin: -53px 0px 0px 0px;
-                border-radius: 50% 50% 50% 50%;
+                border-radius: 50%;
                 overflow: hidden;
                 img {
                     width: 110px;
@@ -246,7 +287,7 @@
                 align-self: flex-start;
                 &-inner {
                     margin: 14px 0px 0px 66px;
-                    border-radius: 0px 0px 0px 0px;
+                    border-radius: 0px;
                     width: 60px;
                     height: 60px;
                     & i {
@@ -266,10 +307,16 @@
                 font-weight: 400;
                 font-style: normal;
                 line-height: 32px;
-                width: 610px;
+                max-width: 610px;
                 background-color: rgba(0, 0, 0, 0);
                 padding: 0px 0px 0px 0px;
                 margin: -51px 0px 32px 0px;
+                @include tablet {
+                    max-width: 470px;
+                }
+                @include mobile {
+                    max-width: 270px;
+                }
             }
             &-name {
                 order: 5;
@@ -282,11 +329,6 @@
                 line-height: 35px;
                 margin: 0px 0px 60px 0px;
             }
-        }
-        &-grid {
-            max-width: 1200px;
-            margin: auto;
-            // overflow: hidden;
         }
     }
     .meet {
@@ -337,6 +379,14 @@
                 @include flex();
                 margin: 50px auto;
                 width: 60%;
+                @include tablet() {
+                    width: 80%;
+                }
+                @include mobile() {
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                }
             }
             .email-input {
                 padding: 18px 26px 18px 26px;
@@ -349,6 +399,11 @@
                 font-style: normal;
                 width: 100%;
                 flex: 1;
+                @include mobile() {
+                    border-radius: 35px;
+                    min-width: 450px;
+                    margin: auto;
+                }
             }
             label {
                 flex: 2;
@@ -365,6 +420,10 @@
                 padding: 20px 75px 20px 75px;
                 margin: 0px 0px 0px 0px;
                 border-radius: 0px 35px 35px 0px;
+                @include mobile() {
+                    border-radius: 35px;
+                    padding: 20px 40px;
+                }
                 &:hover {
                     color: $yellow-clr;
                     background-color: $black-clr;
@@ -377,10 +436,14 @@
             max-width: 1200px;
             margin: auto;
             padding: 120px 0 105px;
-            @include flex();
+            @include mobile() {
+                padding: 30px;
+            }
+            @include tablet() {
+                padding: 50px;
+            }
         }
         &-box {
-            flex: 1;
             &-img {
                 padding-bottom: 20px;
             }

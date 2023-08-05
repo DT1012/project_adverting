@@ -7,6 +7,12 @@
     color: $white-clr;
     &-container {
         padding: 140px 0 150px;
+        @include tablet() {
+            padding: 50px 0;
+        }
+        @include mobile() {
+            padding: 30px 0;
+        }
     }
     &-header {
         p {
@@ -19,6 +25,9 @@
         max-width: 600px;
         margin: auto;
         position: relative;
+        @include mobile() {
+            padding-left: 10px;
+        }
         &-item {
             display: inline-block;
             padding-bottom: 4px;
@@ -31,37 +40,48 @@
         }
     }
     &-box {
-        width: 100%;
-        &-item {
-            @include flex($justify-content: none);
-            gap: 15px;
-            margin: 10px;
-            .active {
-                display: block !important;
-            }
-        }
+        &-item {}
         &-list {
             position: relative;
             display: none;
+            overflow: hidden;
             &:hover .work-info {
                 display: block;
-                background-color: rgba(248, 189, 6, 0.9);
             }
         }
     }
     &-img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
         overflow: hidden;
+        @include mobile {
+            padding: 10px 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            @include mobile() {
+                padding-left: 10px;
+            }
+            object-fit: contain;
+        }
     }
     &-info {
         transition: all 0.5s linear;
         @include abs();
         width: 100%;
         height: 100%;
-        padding-top: 125px;
         display: none;
         background-color: transparent;
+        &-bg {
+            background-color: rgba(248, 189, 6, 0.9);
+            margin: 10px 0 0 15px;
+            height: 95%;
+            width: 100%;
+            padding-top: 120px;
+            text-align: center;
+        }
         .work-icon {
             font-size: 2rem;
             & i {

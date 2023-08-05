@@ -42,14 +42,35 @@
 
 <body>
     <div id="app">
-        <div id="container">
+        <div class="bg-color-mobile d-none">
+            <div class="position-reletive">
+                <div class="header-nav-mobile d-lg-none">
+                    <div class="row mb-5">
+                        <div class="header-logo ps-3 col">
+                            <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
+                        </div>
+                        <div class="header-mobile-close col"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <ul class="header-nav-mobile-list p-0">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./ourteam.html">Our Team</a></li>
+                        <li><a href="./project.html">Projects</a>
+                        </li>
+                    </ul>
+                </div>
 
+            </div>
+        </div>
+        <div id="container">
+            <!-- Nav-mobile -->
             <!-- Start Header -->
             <header id="header" class="header">
                 <div class="header-logo">
                     <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
                 </div>
-                <ul class="header-nav">
+                <ul class="header-nav header-nav-desktop d-none d-lg-flex">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./blog.html">Blog</a></li>
@@ -61,6 +82,8 @@
                     </li>
                 </ul>
                 <button class="btn header-btn-callus"><p>call us</p></button>
+                <div class="btn-mobile d-lg-none"><i class="fa-solid fa-bars"></i></div>
+
             </header>
             <div class="retangle1"></div>
             <!-- End Header -->
@@ -120,29 +143,29 @@
             </section>
             <section>
                 <div class="about-intro">
-                    <div class="about-item">
-                        <div class="about-list">
+                    <div class="about-item row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                        <div class="about-list col">
                             <div class="about-image">
                                 <img src="./assets/images/about_icon/icon-1.png" alt="Icon About">
                             </div>
                             <h2 class="about-list-title">Decades of Experience</h2>
                             <p>We are a US leading global communications marketing firm, enhanced by more than a hundred of talented employees.</p>
                         </div>
-                        <div class="about-list">
+                        <div class="about-list col">
                             <div class="about-image">
                                 <img src="./assets/images/about_icon/icon-2.png" alt="Icon About">
                             </div>
                             <h2 class="about-list-title">Team of Skilled Pros</h2>
                             <p>Led by few seasoned advertising industry pros, our agency delivers innovative solutions across all the mediums available nowadays.</p>
                         </div>
-                        <div class="about-list">
+                        <div class="about-list col">
                             <div class="about-image">
                                 <img src="./assets/images/about_icon/icon-3.png" alt="Icon About">
                             </div>
                             <h2 class="about-list-title">We Love Challenges!</h2>
                             <p>Our ultimate goal and passion are about helping brands to meet the ever-shifting needs of communities and cultures.</p>
                         </div>
-                        <div class="about-list">
+                        <div class="about-list col">
                             <div class="about-image">
                                 <img src="./assets/images/about_icon/icon-4.png" alt="Icon About">
                             </div>
@@ -160,32 +183,33 @@
                         <h2 class="title">Our Skills</h2>
                         <p class="derc">If you work in the advertising industry, staying up-to-date is a crucial job requirement!</p>
                     </div>
-
-                    <div class="skill-date">
-                        <div class="skill-list">
-                            <p class="skill-time">2018-09-23</p>
-                            <p class="skill-link"><a href="#">What Beats the Superbowl<br> Ads Budget?</a></p>
+                    <div class="div">
+                        <div class="skill-date">
+                            <div class="skill-list">
+                                <p class="skill-time">2018-09-23</p>
+                                <p class="skill-link"><a href="#">What Beats the Superbowl<br> Ads Budget?</a></p>
+                            </div>
+                            <div class="skill-list">
+                                <p class="skill-time">2018-09-23</p>
+                                <p class="skill-link"><a href="#">Is It Possible to Target Baby <br> Boomers on the Web?</a></p>
+                            </div>
+                            <div class="skill-list">
+                                <p class="skill-time">2018-09-23</p>
+                                <p class="skill-link"><a href="#">Why We Should Use Far<br>More Phygital</a></p>
+                            </div>
                         </div>
-                        <div class="skill-list">
-                            <p class="skill-time">2018-09-23</p>
-                            <p class="skill-link"><a href="#">Is It Possible to Target Baby <br> Boomers on the Web?</a></p>
+                        <div class="skill-box">
+                            <div class="skill-list">
+                                <i class="fa fa-circle"></i>
+                            </div>
+                            <div class="skill-list">
+                                <i class="fa fa-circle"></i>
+                            </div>
+                            <div class="skill-list">
+                                <i class="fa fa-circle"></i>
+                            </div>
+                            <div class="retangle2"></div>
                         </div>
-                        <div class="skill-list">
-                            <p class="skill-time">2018-09-23</p>
-                            <p class="skill-link"><a href="#">Why We Should Use Far<br>More Phygital</a></p>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <div class="skill-list">
-                            <i class="fa fa-circle"></i>
-                        </div>
-                        <div class="skill-list">
-                            <i class="fa fa-circle"></i>
-                        </div>
-                        <div class="skill-list">
-                            <i class="fa fa-circle"></i>
-                        </div>
-                        <div class="retangle2"></div>
                     </div>
                 </div>
             </section>
@@ -208,11 +232,14 @@
                             <div class="retangle3"></div>
                         </div>
                         <div class="work-box">
-                            <div class="work-box-item">
-                                <article class="work-box-list hide" type-word="cpm pr active">
+                            <div class="work-box-item row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                                <article class="work-box-list col hide  " type-word="cpm pr active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-1-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -222,10 +249,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide " type-word="cpm phygital active">
+                                <article class="work-box-list col hide " type-word="cpm phygital active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-3-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -235,10 +265,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide" type-word="cpm email active">
+                                <article class="work-box-list col hide" type-word="cpm email active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-5-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -248,10 +281,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide" type-word="phygital creative active">
+                                <article class="work-box-list col hide" type-word="phygital creative active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-7-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -261,10 +297,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide " type-word="email creative active">
+                                <article class="work-box-list col hide " type-word="email creative active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-2-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -274,10 +313,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide" type-word="pr email active">
+                                <article class="work-box-list col hide" type-word="pr email active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-6-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -287,10 +329,13 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide" type-word="pr phygital active">
+                                <article class="work-box-list col hide" type-word="pr phygital active">
                                     <div class="work-img">
                                         <img src="./assets/images/work-image/project-8-480x320.jpg" alt="Work-image">
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
+
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
@@ -300,17 +345,19 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="work-box-list hide" type-word="pr phygital active">
+                                <article class="work-box-list col hide" type-word="pr phygital active">
                                     <div class="work-img">
                                         <a><img src="./assets/images/work-image/project-4-480x320.jpg" alt="Work-image"></a>
-                                        <div class="work-info">
+                                    </div>
+                                    <div class="work-info">
+                                        <div class="work-info-bg">
                                             <p class="work-icon">
                                                 <i class="fas fa-plus"></i>
                                                 <i class="fas fa-globe"></i>
                                                 <i class="fas fa-link"></i>
                                             </p>
-                                            <p class="work-link-name"><a>Digital</a></p>
                                         </div>
+                                        <p class="work-link-name"><a>Digital</a></p>
                                     </div>
                                 </article>
                             </div>
@@ -390,13 +437,12 @@
             <!-- End Services -->
             <!-- Start Testimonials -->
             <section id="testimonials" class="testimonials">
-                <div class="testimonials-container">
+                <div class="testimonials-container container">
                     <div class="testimonials-header">
                         <h2 class="title">Testimonials</h2>
                         <p class="derc">Having helped to increase the sales for dozens of companies so far, many of our clients wrote nice reviews!</p>
                     </div>
-                    <div class="testimonials-grid owl-carousel">
-
+                    <div class="testimonials-grid clearfix owl-carousel">
                         <div class="testimonials-member item">
                             <div class="testimonials-member-content">
                                 <div class="testimonials-member-image">
@@ -451,7 +497,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -686,8 +731,8 @@
                 </div>
             </section>
             <section id="contact" class="contact">
-                <div class="contact-container">
-                    <div class="contact-box">
+                <div class="contact-container row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-5.png" alt="Contact Image">
                         </div>
@@ -696,7 +741,7 @@
                             <p class="contact-box-info-derc">908 New Hampshire Avenue Northwest #100, Washington, DC 20037, United States</p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-6.png" alt="Contact Image">
                         </div>
@@ -707,7 +752,7 @@
                                 <br> Fax: <a href="callto:+19168752235">+1 916-875-2235</a></p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-7.png" alt="Contact Image">
                         </div>
@@ -720,7 +765,7 @@
                                 <a href="mailto:adverting-2@demolink.org">adverting-2@demolink.org</a></p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-8.png" alt="Contact Image">
                         </div>
@@ -747,6 +792,9 @@
                 </div>
             </footer>
         </div>
+        <div id="toTop" role="button" style="display: block;">
+            <a href="#app"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
     </div>
     <!-- Jquery cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -755,14 +803,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <script>
         $(".owl-carousel").owlCarousel({
-            // loop: true,
-            margin: 15,
-            // nav: true,
+            loop: true,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1,
-                }
-            },
+                    nav: false,
+                    loop: false
+                },
+                600: {
+                    items: 1,
+                    nav: false,
+                    loop: false
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: false
+                },
+            }
         });
     </script>
 </body>

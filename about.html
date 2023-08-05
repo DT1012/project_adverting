@@ -25,20 +25,41 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/main.min.css">
-    <script src="./assets/js/main.js" defer></script>
     <script src="./assets/js/counter.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
 
 <body>
     <div id="app">
+        <div class="bg-color-mobile d-none">
+            <div class="position-reletive">
+                <div class="header-nav-mobile d-lg-none">
+                    <div class="row mb-5">
+                        <div class="header-logo ps-3 col">
+                            <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
+                        </div>
+                        <div class="header-mobile-close col"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <ul class="header-nav-mobile-list p-0">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./ourteam.html">Our Team</a></li>
+                        <li><a href="./project.html">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
         <div id="container">
 
             <!-- Start Header -->
             <header id="header" class="header">
                 <div class="header-logo">
-                    <img class="me-4" src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
+                    <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
                 </div>
-                <ul class="header-nav">
+                <ul class="header-nav header-nav-desktop d-none d-lg-flex">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./blog.html">Blog</a></li>
@@ -50,6 +71,8 @@
                     </li>
                 </ul>
                 <button class="btn header-btn-callus"><p>call us</p></button>
+                <div class="btn-mobile d-lg-none"><i class="fa-solid fa-bars"></i></div>
+
             </header>
             <div class="retangle1"></div>
             <section id="aboutus" class="aboutus">
@@ -59,8 +82,8 @@
                 </div>
             </section>
             <section class="content container">
-                <div class="row row-cols-lg-2">
-                    <div class="col d-flex pe-5">
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="col d-flex pe-5 flex-lg-row flex-column">
                         <div class="content-image">
                             <img src="./assets/images/about/icon-9.webp" alt="">
                         </div>
@@ -70,7 +93,7 @@
                                 their global positioning and reconnect them with end-customers.</p>
                         </div>
                     </div>
-                    <div class="col d-flex pe-5">
+                    <div class="col d-flex pe-5 flex-lg-row flex-column">
                         <div class="content-image">
                             <img src="./assets/images/about/icon-10.webp" alt="">
                         </div>
@@ -80,7 +103,7 @@
                                 content, insights, and campaign management, with a time and efficiency proven record.</p>
                         </div>
                     </div>
-                    <div class="col d-flex pe-5">
+                    <div class="col d-flex pe-5 flex-lg-row flex-column">
                         <div class="content-image">
                             <img src="./assets/images/about/icon-11.webp" alt="">
                         </div>
@@ -90,7 +113,7 @@
                                 made you stronger and earned us a unique perspective for the work we do today.</p>
                         </div>
                     </div>
-                    <div class="col d-flex pe-5">
+                    <div class="col d-flex pe-5 flex-lg-row flex-column">
                         <div class="content-image">
                             <img src="./assets/images/about/icon-12.webp" alt="">
                         </div>
@@ -104,7 +127,7 @@
             </section>
             <section class="prarameter show-on-scroll">
                 <div class="container">
-                    <div class="row prarameter-list ">
+                    <div class="row prarameter-list row-cols-1 row-cols-md-4 ">
                         <div class="col">
                             <p class="completed">0</p>
                             <p>Projects Completed</p>
@@ -403,8 +426,8 @@
             </section>
             <!-- End Testimonials -->
             <section id="contact" class="contact">
-                <div class="contact-container">
-                    <div class="contact-box">
+                <div class="contact-container row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-5.png" alt="Contact Image">
                         </div>
@@ -413,7 +436,7 @@
                             <p class="contact-box-info-derc">908 New Hampshire Avenue Northwest #100, Washington, DC 20037, United States</p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-6.png" alt="Contact Image">
                         </div>
@@ -424,7 +447,7 @@
                                 <br> Fax: <a href="callto:+19168752235">+1 916-875-2235</a></p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-7.png" alt="Contact Image">
                         </div>
@@ -437,7 +460,7 @@
                                 <a href="mailto:adverting-2@demolink.org">adverting-2@demolink.org</a></p>
                         </div>
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box col">
                         <div class="contact-box-img">
                             <img src="./assets/images/about_icon/icon-8.png" alt="Contact Image">
                         </div>
@@ -463,6 +486,9 @@
                     </div>
                 </div>
             </footer>
+        </div>
+        <div id="toTop" class="" role="button" style="display: block;">
+            <a href="#app"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
     </div>
     <!-- Jquery cdn-->

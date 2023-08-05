@@ -1,5 +1,6 @@
 #project {
     .work {
+        min-height: 75vh;
         &-box {
             &-item {
                 margin: 0;
@@ -37,9 +38,12 @@
             &-bg {
                 margin: 25px;
                 background-color: rgba(248, 189, 6, 0.9);
-                height: 84%;
+                height: 95%;
                 padding-top: 120px;
                 text-align: center;
+                @include mobile() {
+                    height: 93%;
+                }
             }
         }
         &-btn {

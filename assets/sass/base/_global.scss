@@ -60,14 +60,15 @@ h3 {
     line-height: 33.75px;
 }
 
-article {
-    width: 24%;
-}
-
 .hide {
     display: block !important;
 }
 
+.row {
+    width: 100%;
+}
+
+#post,
 #project,
 #blog,
 #ourteam {
@@ -93,6 +94,57 @@ article {
                 color: $black-clr;
                 opacity: 1;
             }
+        }
+    }
+}
+
+.entry-meta {
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+    color: #a1a2a4;
+    .byline,
+    .cat-links {
+        &>a {
+            color: #ffc000;
+            &:hover {
+                color: #3b3d42;
+            }
+        }
+    }
+}
+
+.entry-content {
+    max-width: 570px;
+    margin: 0 0 1em;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: Poppins, sans-serif;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #3b3d42;
+    hyphens: auto;
+    text-align: justify;
+}
+
+.entry-footer {
+    &>a {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 11px;
+        line-height: 1;
+        font-family: Poppins, sans-serif;
+        letter-spacing: 1px;
+        color: #ffffff;
+        background-color: #ffc000;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 4px;
+        &:hover {
+            color: #ffffff;
+            background-color: rgb(255, 230, 38);
         }
     }
 }

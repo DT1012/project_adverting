@@ -5,6 +5,12 @@
         margin: auto;
         @include flex();
         padding: 16px 0;
+        @include mobile() {
+            flex-direction: column;
+        }
+        @include tablet() {
+            flex-direction: column;
+        }
     }
     &-copyright {
         flex: 1;
@@ -36,7 +42,7 @@
             color: #00aced;
         }
         &>a:nth-child(3) {
-            color: #b4a773;
+            color: #e26c27;
         }
         &>a:nth-child(4) {
             color: #3980f4;

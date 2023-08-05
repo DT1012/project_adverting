@@ -5,7 +5,9 @@ const $$ = document.querySelectorAll.bind(document);
 const work_nav = $$('.work-nav-item');
 const work_box = $$('.work-box-list');
 const retangle = $('.work-nav .retangle3')
-
+const bard = $('.btn-mobile');
+const headerNav = $('.bg-color-mobile');
+const close = $('.header-mobile-close');
 const show = $('.showall');
 // filter
 work_nav.forEach((nav) => {
@@ -25,6 +27,12 @@ work_nav.forEach((nav) => {
     })
 })
 
+bard.addEventListener('click', () => {
+    headerNav.classList.add('hide')
+})
+close.addEventListener('click', () => {
+    headerNav.classList.remove('hide')
+})
 
 show.addEventListener('click', () => {
     work_box.forEach((item) => {

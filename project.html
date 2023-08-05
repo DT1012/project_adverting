@@ -24,13 +24,33 @@
 
 <body>
     <div id="project" class="project">
+        <div class="bg-color-mobile d-none">
+            <div class="position-reletive">
+                <div class="header-nav-mobile d-lg-none">
+                    <div class="row mb-5">
+                        <div class="header-logo ps-3 col">
+                            <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
+                        </div>
+                        <div class="header-mobile-close ms-5 mt-3 col"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <ul class="header-nav-mobile-list p-0">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./ourteam.html">Our Team</a></li>
+                        <li><a href="./project.html">Projects</a>
+                        </li>
+                    </ul>
+                </div>
 
+            </div>
+        </div>
         <header id="header" class="header ">
-            <div class="container d-flex">
+            <div class="container p-4 p-lg-2 d-flex">
                 <div class="header-logo">
                     <img src="./assets/logo/invert-logo.png" alt="Logo" class="logo">
                 </div>
-                <ul class="header-nav">
+                <ul class="header-nav d-none d-lg-flex">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./blog.html">Blog</a></li>
@@ -42,12 +62,14 @@
                     </li>
                 </ul>
                 <button class="btn header-btn-callus"><p>call us</p></button>
+                <div class="btn-mobile d-lg-none"><i class="fa-solid fa-bars"></i></div>
+
             </div>
         </header>
         <section class="work" id="work">
             <div class="container">
                 <div class="work-content">
-                    <div class="work-nav">
+                    <div class="work-nav text-center">
                         <div class="work-nav-item active" type-word="all">All</div>
                         <div class="work-nav-item" type-word='cpm'>CPM</div>
                         <div class="work-nav-item" type-word='pr'>PR</div>
@@ -159,7 +181,6 @@
                                 </div>
                                 <div class="work-info">
                                     <div class="work-info-bg">
-
                                         <p class="work-icon">
                                             <i class="fas fa-plus"></i>
                                             <i class="fas fa-globe"></i>
